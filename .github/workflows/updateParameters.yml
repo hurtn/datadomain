@@ -8,14 +8,14 @@ on:
       - '.github/workflows/updateParameters.yml'
 
 env:
-  GLOBAL_DNS_RESOURCE_GROUP_ID: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}'
-  DATA_LANDING_ZONE_SUBSCRIPTION_ID: '{dataLandingZoneSubscriptionId}'
-  DATA_LANDING_ZONE_NAME: '{dataLandingZoneName}' # Choose max. 11 characters. They will be used as a prefix for all services. If not unique, deployment can fail for some services.
-  LOCATION: '{regionName}'                        # Specifies the region for all services (e.g. 'northeurope', 'eastus', etc.)
-  SUBNET_ID: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}'
-  SYNAPSE_STORAGE_ACCOUNT_NAME: '{synapseStorageAccountName}'
-  SYNAPSE_STORAGE_ACCOUNT_FILE_SYSTEM_NAME: '{synapseStorageAccountFileSystemName}'
-  AZURE_RESOURCE_MANAGER_CONNECTION_NAME: '{resourceManagerConnectionName}'
+  GLOBAL_DNS_RESOURCE_GROUP_ID: '/subscriptions/ae471991-28e3-4038-a82d-ef99cb7ea65c/resourceGroups/udaldomainops'
+  DATA_LANDING_ZONE_SUBSCRIPTION_ID: 'ae471991-28e3-4038-a82d-ef99cb7ea65c'
+  DATA_LANDING_ZONE_NAME: 'udal' # Choose max. 11 characters. They will be used as a prefix for all services. If not unique, deployment can fail for some services.
+  LOCATION: 'eastus'                        # Specifies the region for all services (e.g. 'northeurope', 'eastus', etc.)
+  SUBNET_ID: '/subscriptions/ae471991-28e3-4038-a82d-ef99cb7ea65c/resourceGroups/udaldomainops/providers/Microsoft.Network/virtualNetworks/domainopsvnet/subnets/default'
+  SYNAPSE_STORAGE_ACCOUNT_NAME: 'centralstor'
+  SYNAPSE_STORAGE_ACCOUNT_FILE_SYSTEM_NAME: 'landing'
+  AZURE_RESOURCE_MANAGER_CONNECTION_NAME: 'domainopsspn'
 
 jobs:
   renaming:
